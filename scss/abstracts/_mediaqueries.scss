@@ -1,0 +1,841 @@
+//------------------------------------------------------//
+// MEDIA QUERIES TABLET SCREEN  //
+//------------------------------------------------------//
+
+//   INDEX TABLET  //
+
+#body {
+    @media screen and (min-width: 600px) {
+        #header {
+            .navbar-toggler {
+                display: none;
+            }
+        }
+
+        #main {
+            #card-section {
+                #grid-card-container {
+                    #flex-card-container {
+                        margin: 0;
+
+                        #grid-item-card {
+                            #card {
+                                width: 75%;
+                                margin: 0 auto;
+                            }
+
+                            #card #card-text {
+                                width: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            //  INDEX FORMACION MUSICAL TABLET  //
+
+            .grid-formacion-musical {
+                .formacion-title {
+                    font-size: $title-size3;
+                }
+
+                .formacion1,
+                .formacion2,
+                .formacion3 {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        //------------------------------------------------------//
+        //  PORTFOLIO TABLET PAGE  //
+        //------------------------------------------------------//
+
+        main {
+            .portfolio-container {
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas:
+                    "main-hero-portfolio main-hero-portfolio"
+                    "portfolio-title portfolio-title"
+                    "img-section1 img-section2";
+            }
+        }
+
+        //------------------------------------------------------//
+        //   EQUIPOS TABLET PAGE  //
+        //------------------------------------------------------//
+
+        .main-equipos {
+            grid-template-areas:
+                "main-equipos-title main-equipos-title"
+                "card1 card2"
+                "card3 card4"
+                "card5 card6"
+                "horizontal-line-vst horizontal-line-vst"
+                "vst-title vst-title"
+                "card-vst-section card-vst-section"
+                "horizontal-line-carousel horizontal-line-carousel"
+                "carousel-title carousel-title"
+                "carousel-gallery carousel-gallery";
+
+            .main-equipos-title {
+                text-align: center;
+                width: 100%;
+
+                h1 {
+                    font-size: $title-size3;
+                    padding-top: 7rem;
+                }
+            }
+        }
+
+        //------------------------------------------------------//
+        //  PHOTO TABLET PAGE  //
+        //------------------------------------------------------//
+
+        .flex-photo-gallery {
+            .gallery-title {
+                padding-top: 2rem;
+                h1 {
+                    font-size: $title-size4;
+                }
+            }
+
+            .grid-photo-container {
+                padding: 5rem;
+                gap: 3rem;
+                grid-template-areas:
+                    "gallery-section1 gallery-section2"
+                    "gallery-section1 gallery-section2"
+                    "gallery-section1 gallery-section2";
+
+                .gallery-section2 {
+                    display: block;
+                }
+
+                .gallery-section1,
+                .gallery-section2,
+                .gallery-section3 {
+                    .gallery-flex-container {
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //------------------------------------------------------//
+    // MEDIA QUERIES TABLET 2 BREAKPOINT SCREEN  //
+    //------------------------------------------------------//
+
+    // INDEX  HEADER TABLET  //
+
+    @media screen and (min-width: 726px) {
+
+        #header {
+            #menu {
+                #nav-menu {
+                    .container-logo {
+                        margin-left: 1rem;
+                        height: 15vh;
+
+                        .link-logo {
+                            @include flexcol;
+                            transition: 1s;
+
+                            &:hover {
+                                transform: scale(1.1);
+                                z-index: 2;
+                            }
+
+                            img {
+                                width: 80px;
+                                display: block;
+                                filter: brightness(80%);
+
+                                img:hover {
+                                    animation: rotating 3s linear infinite;
+                                }
+
+                                @keyframes rotating {
+                                    from {
+                                        transform: rotate(0deg);
+                                    }
+
+                                    to {
+                                        transform: rotate(360deg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //------------------------------------------------------//
+
+        //  INDEX CARD SECTION TABLET //
+
+        #main {
+            #main-hero-section {
+                #main-hero-container {
+                    height: 60vh;
+
+                    #main-title {
+                        h1 {
+                            font-size: $title-size4;
+                        }
+                    }
+                }
+            }
+
+            #card-section {
+                #card-title-intro {
+                    font-size: $title-size3;
+                    padding: 1rem 0;
+                }
+            }
+
+            .grid-estudios {
+                margin: 0 6rem;
+            }
+        }
+
+        .footer-container {
+            .footer-content {
+                span {
+                    display: inline-block;
+                }
+            }
+        }
+
+        //------------------------------------------------------//
+        // PORTFOLIO PAGE TABLET //
+        //------------------------------------------------------//
+
+        main {
+            .portfolio-container {
+                .main-hero-portfolio {
+                    .portfolio-hero-title {
+                        font-size: $title-size4;
+                    }
+                }
+            }
+        }
+
+        //------------------------------------------------------//
+        // HORARIOS PAGE TABLET //
+        //------------------------------------------------------//
+
+        .grid-container-horarios {
+            .main-hero-horarios {
+                section {
+                    .main-section-horarios-flex {
+                        .main-title-horarios {
+                            font-size: $title-size3;
+                            padding-top: 4rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        //------------------------------------------------------//
+        ///  EQUIPOS TABLET PAGE  //
+        //------------------------------------------------------//
+
+        .container-fluid {
+            #carousel-gallery {
+                margin: 0 5rem;
+            }
+        }
+    }
+
+
+    //------------------------------------------------------//
+    // MEDIA QUERIES TABLET 3 BREAKPOINT SCREEN  //
+    //------------------------------------------------------//
+
+    //  INDEX CARD TABLET PAGE  //
+
+    @media screen and (min-width: 800px) {
+        #main {
+            #card-section {
+                #grid-card-container {
+                    #flex-card-container {
+                        #grid-item-card {
+                            #card {
+                                width: 60%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //------------------------------------------------------//
+    // MEDIA QUERIES DESKTOP SCREEN  //
+    //------------------------------------------------------//
+
+    @media screen and (min-width: 1024px) {
+
+        //    INDEX DESKTOP PAGE //
+
+        #main {
+            #main-hero-section {
+                #main-hero-container {
+                    height: 80vh;
+
+                    #main-title {
+                        #title-hero {
+                            font-size: $title-size-main;
+                        }
+                    }
+                }
+            }
+
+            #main-text {
+                padding: 5rem 0 3rem 0;
+
+                #main-text-container {
+                    width: 65%;
+                    font-size: 1rem;
+
+                    #main-subtitle {
+                        font-size: $title-size3;
+                    }
+                }
+            }
+
+            #main-text-2-section {
+                #main-text-2-container {
+                    width: 65%;
+                    font-size: 1rem;
+
+                    #main-subtitle-2 {
+                        font-size: $title-size3;
+                        line-height: 3.5rem;
+                    }
+                }
+            }
+
+            //------------------------------------------------------//
+
+            //   CARD DESKTOP SECTION  //
+
+            #card-section {
+                padding: 2rem 0 7rem 0;
+
+                #card-title-intro {
+                    padding: 0;
+                    letter-spacing: $letter-spacing1;
+                    font-size: $title-size3;
+                }
+
+                #grid-card-container {
+                    padding: 3rem 2rem 0 2rem;
+                    height: 100%;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-rows: 1fr;
+                    grid-template-areas:
+                        "card-section1 card-section2 card-section3";
+
+                    #flex-card-container {
+
+                        #card-section1,
+                        #card-section2,
+                        #card-section3 {
+                            #grid-item-card {
+                                #card {
+                                    margin: 0;
+                                    width: 100%;
+
+                                    #card-title {
+                                        font-size: $title-size2;
+                                    }
+
+                                    #card-text {
+                                        width: 80%;
+                                        font-size: 1.1rem;
+                                        line-height: $line-height1-7;
+                                        margin-bottom: 2.5rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            //------------------------------------------------------//
+
+            //  NUESTRO ESTUDIO INTRO DESKTOP SECTION //
+
+            #recording-studio-section {
+
+                #recording-studio-title {
+                    font-size: $title-size3;
+                }
+
+                #recording-studio {
+                    padding: 3rem 0;
+                }
+            }
+
+            //------------------------------------------------------//
+
+            // NUESTRO ESTUDIO INFO DESKTOP //
+
+            .grid-estudios {
+                margin: 2rem;
+                display: grid;
+                grid-template-areas:
+                    "image1 estudio-article1"
+                    "estudio-article2 image2"
+                    "image3 estudio-article3";
+                row-gap: 4rem;
+
+                .image1,
+                .image2,
+                .image3 {
+                    img {
+                        width: 100%;
+                    }
+
+                    .image-overlay {
+                        width: 100%;
+                    }
+                }
+
+                article {
+                    @include flexcol;
+
+                    p {
+                        padding: 0 2rem;
+                        font-size: 1.3rem;
+                        width: 100%;
+                        line-height: $line-height2;
+                    }
+                }
+            }
+
+            //------------------------------------------------------//
+
+            // SERVICIO DE PRODUCCION MUSICAL DESKTOP //
+
+            .grid-produccion-musical {
+                grid-template-areas:
+                    "produccion-title produccion-title produccion-title"
+                    "produccion1 produccion2 produccion3"
+                    "produccion-article1 produccion-article2 produccion-article3";
+                row-gap: 4rem;
+
+                .produccion-musical-title {
+                    padding: 2rem 0;
+
+                    h5 {
+                        font-size: 2.5rem;
+                    }
+                }
+
+                .produccion-article1,
+                .produccion-article2,
+                .produccion-article3 {
+                    margin: 0 2rem 2rem 2rem;
+                }
+            }
+
+            //------------------------------------------------------//
+
+            // FORMACION MUSICAL DESKTOP //
+
+            .grid-formacion-musical {
+                padding: 2rem 0;
+                grid-template-columns: 50% 50%;
+                grid-template-areas:
+                    "formacion-title formacion-title"
+                    "formacion1 formacion-article1"
+                    "formacion-article2 formacion2"
+                    "h-line h-line"
+                    "formacion3 formacion-article3"
+                    "formacion-article4 formacion4";
+                row-gap: 4rem;
+
+                .formacion1,
+                .formacion2,
+                .formacion3 {
+                    img {
+                        height: 100%;
+                    }
+                }
+
+                .formacion-article1 {
+                    margin: 0;
+                    padding: $padding2;
+
+                    ul {
+                        text-align: center;
+                    }
+                }
+
+                .formacion-article2,
+                .formacion-article3 {
+                    margin: 0;
+                    padding-top: 3rem;
+
+                    p {
+                        padding: 0 2rem;
+
+                        span {
+                            display: block;
+                        }
+                    }
+                }
+
+                .formacion4 {
+                    img {
+                        @include medidas (100%, 100%);
+                    }
+                }
+
+                .formacion-article4 {
+                    margin: 0;
+                    padding: 4rem 0;
+                }
+            }
+
+            .horizontal-line-formacion {
+                display: block;
+            }
+
+            #carousel-show {
+                display: block;
+            }
+
+            .horizontal-line-recording {
+                display: block;
+            }
+        }
+
+        //------------------------------------------------------//
+        //  PORTFOLIO DESKTOP PAGE //
+        //------------------------------------------------------//
+
+        main {
+            .portfolio-container {
+                width: 100%;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-areas:
+                    "main-hero-portfolio main-hero-portfolio main-hero-portfolio"
+                    "portfolio-title portfolio-title portfolio-title"
+                    "img-section1 img-section2 img-section3";
+
+                .main-hero-portfolio {
+                    @include medidas (100%, 100vh);
+
+                    .portfolio-hero-title {
+                        font-size: $title-size6
+                    }
+                }
+
+                .portfolio-title {
+                    h2 {
+                        font-size: $title-size6;
+                    }
+                }
+
+                .img-section3 {
+                    display: block;
+                }
+            }
+        }
+
+        //------------------------------------------------------//
+        // HORARIOS DESKTOP PAGE  //
+        //------------------------------------------------------//
+
+        .grid-container-horarios {
+            grid-template-areas:
+                "main-hero-horarios main-hero-horarios"
+                "main-section-horarios-flex main-section-horarios-flex"
+                "main-title-horarios main-title-horarios";
+
+            .main-hero-horarios {
+                section {
+                    .main-section-horarios-flex {
+                        .main-title-horarios {
+                            font-size: $title-size4;
+                            margin-top: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        //------------------------------------------------------//
+        // EQUIPOS DESKTOP PAGE //
+        //------------------------------------------------------//
+
+        .main-equipos {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas:
+                "main-equipos-title main-equipos-title main-equipos-title"
+                "card1 card2 card3"
+                "card4 card5 card6"
+                "horizontal-line-vst horizontal-line-vst horizontal-line-vst"
+                "vst-title vst-title vst-title"
+                "card-vst-section card-vst-section card-vst-section"
+                "horizontal-line-carousel horizontal-line-carousel horizontal-line-carousel"
+                "carousel-title carousel-title carousel-title"
+                "carousel-gallery carousel-gallery carousel-gallery";
+
+            .main-equipos-title {
+                h1 {
+                    font-size: $title-size4;
+                }
+            }
+
+            .card1,
+            .card2,
+            .card3,
+            .card4,
+            .card5,
+            .card6 {
+
+                h2 {
+                    font-size: $title-size3;
+                }
+
+                h3 {
+                    font-size: $title-size3;
+                }
+
+                h4 {
+                    font-size: $title-size3;
+                }
+            }
+
+            .horizontal-line-vst {
+                display: block;
+            }
+
+            .vst-title {
+                display: block;
+            }
+
+            .card-vst-section {
+                display: flex;
+            }
+
+            .carousel-title {
+                h6 {
+                    font-size: $title-size4;
+                }
+            }
+
+            .container-fluid {
+                #carousel-gallery {
+                    margin: 0 9rem;
+                }
+            }
+        }
+
+        //------------------------------------------------------//
+        // PHOTO DESKTOP //
+        //------------------------------------------------------//
+
+        .flex-photo-gallery {
+            .gallery-title {
+                h1 {
+                    font-size: $title-size6;
+                }
+            }
+
+            .grid-photo-container {
+                padding: 5rem;
+                gap: 3rem;
+                grid-template-areas:
+                    "gallery-section1 gallery-section2 gallery-section3"
+                    "gallery-section1 gallery-section2 gallery-section3"
+                    "gallery-section1 gallery-section2 gallery-section3";
+
+                .gallery-section1,
+                .gallery-section2,
+                .gallery-section3 {
+                    .gallery-flex-container {
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .gallery-section3 {
+                    display: block;
+                }
+            }
+        }
+
+        //------------------------------------------------------//
+        //  CONTACTO DESKTOP PAGE  //
+        //------------------------------------------------------//
+
+        #main {
+            section {
+                .contacto-title {
+                    font-size: $title-size5;
+                }
+            }
+        }
+    }
+
+    //------------------------------------------------------//
+    // MEDIA QUERIES DESKTOP 2 BREAKPOINT SCREEN  //
+    //------------------------------------------------------//
+
+    @media screen and (min-width: 1160px) {
+
+        #main {
+            .horizontal-line-studio {
+                display: block;
+            }
+
+            .horizontal-line-rectangle {
+                display: block;
+            }
+
+
+
+            .horizontal-line-studio {
+                display: block;
+            }
+
+
+            //------------------------------------------------------//
+
+            //  RECORDING STUDIO SECTION  DESKTOP  //
+
+            #recording-studio-section {
+                display: block;
+
+                #recording-studio {
+                    padding: 3rem 0;
+
+                    #grey-square1 {
+                        position: relative;
+                        left: 340px;
+                        @include medidas (15%, 330px);
+
+                        img {
+                            position: absolute;
+                            top: -3rem;
+                            bottom: 20px;
+                            left: -100px;
+                            @include medidas (350px, auto);
+                        }
+                    }
+
+                    #grey-square2 {
+                        position: relative;
+                        left: -320px;
+                        @include medidas (30%, 130px);
+
+                        img {
+                            position: absolute;
+                            top: -150px;
+                            bottom: 40px;
+                            left: -10px;
+                            @include medidas (350px, 250px);
+                        }
+                    }
+
+                    #grey-square3 {
+                        position: relative;
+                        left: 80px;
+                        @include medidas (30%, 180px);
+
+                        img {
+                            position: absolute;
+                            top: -105px;
+                            bottom: 280px;
+                            left: -10px;
+                            @include medidas (350px, 250px);
+                        }
+                    }
+                }
+            }
+
+            //------------------------------------------------------//
+
+            /* ANGLE DIV RED AND WHITE SHOW UP  */
+
+            .show-rectangle {
+                padding: 5rem 0;
+                display: block;
+                filter: brightness(80%);
+
+                .rectangle {
+                    height: 100%;
+                    display: flex;
+
+                    .content {
+                        width: calc(50% - 50px);
+                        background-color: rgb(166, 38, 38);
+                        box-sizing: border-box;
+                        color: $white;
+
+                        h6 {
+                            font-size: $title-size2;
+                            text-align: center;
+                            font-weight: 700;
+                            letter-spacing: $letter-spacing1;
+                            padding: 2rem 0 0.5rem 0;
+                        }
+
+                        p {
+                            margin-left: 1rem;
+                            text-align: center;
+                            font-weight: bold;
+                        }
+
+                        ul {
+                            font-size: $title-size1;
+                            list-style-type: none;
+                            font-weight: 400;
+                            line-height: 1.5rem;
+                        }
+
+                        .boton-flex-center {
+                            padding-top: $padding1;
+                            @include flexcol;
+
+                            .rectangle-btn {
+                                @include btn1;
+
+                                &:hover {
+                                    background-color: rgb(0, 0, 0);
+                                    transition: 0.4s;
+                                    transform: translateY(-0.5%);
+                                }
+
+                                a {
+                                    color: $text-color;
+                                }
+                            }
+                        }
+                    }
+
+                    .image-box {
+                        @include image-box;
+                        background-image: url(../img/whitegirl22.jpeg);
+                    }
+                }
+            }
+        }
+    }
+}

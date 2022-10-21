@@ -1,0 +1,37 @@
+//  CONTACTO MOBILE PAGE //
+
+// MAIN SECTION CONTACTO //
+
+#main {
+    section {
+        #contacto-hero {
+            background-image: linear-gradient(rgba(16, 16, 16, .3), rgba(16, 16, 16, .5)), url(../img/68.jpg);
+            @extend %background-image-hero;
+            height: 75vh;
+        }
+
+        .contacto-title {
+            font-size: $title-size3;
+        }
+
+        #main-contacto {
+            width: 90%;
+            margin: 0 auto;
+
+            div {
+                #btn-contacto {
+                    @extend %btn1;
+
+                    &:hover {
+                        background-color: $grey-hover2;
+                    }
+
+                    a {
+                        padding: $padding1;
+                        color: $text-color;
+                    }
+                }
+            }
+        }
+    }
+}

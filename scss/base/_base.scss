@@ -1,0 +1,47 @@
+/* GLOBAL RESET  */
+
+* {
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// TYPOGRAPHY AND TEXT COLOR
+
+#body {
+    font-family: $roboto;
+    background-color: $black-background;
+    color: $text-global;
+}
+
+// ALL H-LINE SETTING
+
+.horizontal-line {
+    grid-area: h-line;
+    margin: $margin-2-4;
+}
+
+.horizontal-line-footer {
+    margin: 1rem 4rem;
+}
+
+.horizontal-line-carousel {
+    grid-area: horizontal-line-carousel;
+    margin: $margin-2-4;
+}
+
+.horizontal-line-vst {
+    margin: $margin-2-4;
+    grid-area: horizontal-line-vst;
+    display: none;
+}
+
+.horizontal-line-studio {
+    display: none;
+}
+
+// ESTILOS LINKS
+
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,47 @@
+// ------------------------------------------------------//
+// HEADER MENU  //
+// ------------------------------------------------------//
+
+#header {
+    .navbar-toggler{
+        display: block;
+    }
+    #menu {
+        #nav-menu {
+            @extend %navbar-menu;
+
+            .container-logo {
+                &:hover {
+                    background-color: black;
+                }
+
+                .link-logo {
+                    img {
+                        display: none;
+                    }
+                }
+            }
+
+            #menu-flex {
+                #menu-container {
+                    #menu-position {
+                        width: 100%;
+
+                        #menu-list {
+                            #nav-item {
+                                #nav-link {
+                                    color: $hover-color;
+                                    white-space: nowrap;
+                                }
+
+                                #nav-link:hover {
+                                    color: $white-hover;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

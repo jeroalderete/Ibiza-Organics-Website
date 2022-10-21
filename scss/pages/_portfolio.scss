@@ -1,0 +1,140 @@
+// PORTFOLIO MOBILE PAGE  //
+
+// MAIN PORTFOLIO SECTION //
+
+
+#header {
+    .navbar-toggler {
+        display: none;
+    }
+}
+
+
+main {
+    .portfolio-container {
+        padding: 2rem 0 4rem 0;
+        height: 100%;
+        display: grid;
+        grid-template-areas:
+            "main-hero-portfolio"
+            "portfolio-title"
+            "img-section1"
+            "img-section2"
+            "img-section3";
+        gap: 2rem;
+
+        .main-hero-portfolio {
+            width: 100%;
+            height: 65vh;
+            grid-area: main-hero-portfolio;
+            background-image: linear-gradient(rgba(16, 16, 16, .7), rgba(16, 16, 16, .6)), url(../img/29.jpg);
+            @extend %background-image-hero;
+            @include flexcol;
+
+            .portfolio-hero-title {
+                width: 100%;
+                text-align: center;
+                font-size: $title-size3;
+                letter-spacing: $letter-spacing3;
+            }
+        }
+
+        .portfolio-title {
+            grid-area: portfolio-title;
+
+            h2 {
+                position: relative;
+                bottom: 25rem;
+                font-size: $title-size3;
+                text-align: center;
+                letter-spacing: $letter-spacing4;
+            }
+        }
+
+        section {
+            .portfolio-img {
+                @include flexcol;
+                gap: 2rem;
+
+                a {
+                    padding: $padding2;
+
+                    img {
+                        @include medidas (100%, 100%);
+                        transition: 0.2s;
+
+                        &:hover {
+                            transform: translateX(1%);
+                            cursor: pointer;
+                            filter: grayscale(1);
+                        }
+                    }
+                }
+
+                audio {
+                    padding-bottom: $padding-bottom;
+                }
+            }
+        }
+
+        .img-section1 {
+            grid-area: img-section1;
+        }
+
+        .img-section2 {
+            grid-area: img-section2;
+        }
+
+        .img-section3 {
+            grid-area: img-section3;
+            display: none;
+        }
+
+        .img-section1,
+        .img-section2,
+        .img-section3 {
+            height: 100%;
+
+            .portfolio-title-audio {
+                @include flexcol;
+                margin: 1rem 0;
+                gap: 0.2rem;
+
+                .portfolio-btn {
+                    margin: 0 auto;
+                    @extend %btn1;
+
+                    &:hover {
+                        background-color: rgb(15, 15, 15);
+                        transition: 0.4s;
+                        transform: translateY(-0.5%);
+                    }
+
+                    a {
+                        color: $text-color;
+                    }
+                }
+
+                h2 {
+                    @include portfolioTitle;
+                }
+
+                h3 {
+                    @include portfolioTitle;
+                }
+
+                h4 {
+                    @include portfolioTitle;
+                }
+
+                h5 {
+                    @include portfolioTitle3;
+                }
+
+                p {
+                    @include portfolioText;
+                }
+            }
+        }
+    }
+}

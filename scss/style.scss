@@ -1,0 +1,633 @@
+/* IMPORTS VARIABLES MIXINS EXTENDS  */
+
+// ABSTRACTS
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/extend";
+@import "abstracts/mediaqueries";
+
+/* PAGES IMPORTS  */
+
+@import "pages/portfolio";
+@import "pages/horarios";
+@import "pages/galeria";
+@import "pages/contacto";
+
+/* LAYOUT IMPORTS  */
+@import "layout/navbar";
+@import "layout/footer";
+
+/* BASE IMPORTS GLOBAL SETTINGS */
+
+@import "base/base";
+
+// ------------------------------------------------------  //
+// ------------------------------------------------------  //
+
+// FONTS //
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap');
+
+/* ------------------------------------------------------  */
+/*                   MOBILE FIRST                          */
+/* ------------------------------------------------------  */
+
+
+// ------------------------------------------------------  //
+// INDEX MOBILE PAGE //
+// ------------------------------------------------------  //
+
+// INDEX MAIN HERO SECTION //
+
+#main {
+    #main-hero-section {
+        #main-hero-container {
+            height: 40vh;
+            background-color: $black3-background;
+            background-image: linear-gradient(rgba(16, 16, 16, .9), rgba(16, 16, 16, .6)), url(../img/2.jpg);
+            @extend %background-image-hero;
+            @include flexcol;
+
+            #main-title {
+                @include indexTitle;
+
+                #title-hero {
+                    font-size: $title-size3;
+                }
+            }
+        }
+    }
+
+
+    //------------------------------------------------------//
+    // INDEX MAIN TEXT SECTION  //
+    //------------------------------------------------------//
+
+    #main-text {
+        padding-top: 2rem;
+        color: $text-color;
+        text-align: center;
+
+        #main-text-container {
+            #main-subtitle {
+                @extend %title;
+                padding-bottom: 1.5rem;
+            }
+
+            #main-info {
+                line-height: $line-height1-7;
+
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    //------------------------------------------------------//
+    // INDEX CARD MOBILE SECTION //
+    //------------------------------------------------------//
+
+    #card-section {
+        #card-title-intro {
+            @extend %title;
+            margin: $margin;
+            line-height: $line-height3;
+          
+
+          
+        }
+
+        // GRID LAYOUT
+
+        #grid-card-container {
+            padding: $padding;
+            margin-top: $margin2;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas:
+                "card-section1"
+                "card-section2"
+                "card-section3";
+            grid-gap: 6rem;
+
+            #flex-card-container {
+                margin: 0 2rem;
+                @include flexcol;
+                gap: 4rem;
+                text-align: center;
+
+                #card-section1 {
+                    height: 100%;
+                    grid-area: card-section1;
+                }
+
+                #card-section2 {
+                    grid-area: card-section2;
+                }
+
+                #card-section3 {
+                    height: 100%;
+                    grid-area: card-section3;
+                }
+
+                #grid-item-card {
+                    @include medidas (100%, 100%);
+                    cursor: pointer;
+                    transition: 0.2s;
+
+                    &:hover {
+                        transform: translateY(-0.5%);
+                    }
+
+                    #card {
+                        @extend %card;
+                        border: $border-card;
+
+                        &.card1 {
+                            height: 100%;
+                            background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .6)), url(../img/3.jpg);
+                        }
+
+                        &.card2 {
+                            height: 100%;
+                            background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .6)), url(../img/4.jpg);
+                        }
+
+                        &.card3 {
+                            height: 100%;
+                            background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .6)), url(../img/5.jpg);
+                        }
+
+                        #card-title {
+                            font-size: 1.5rem;
+                            letter-spacing: $letter-spacing1;
+                            text-transform: uppercase;
+                        }
+
+                        #card-text {
+                            letter-spacing: $letter-spacing1;
+                            margin: $margin2;
+                        }
+
+                        #card-btn {
+                            @extend %btn1;
+
+                            &:hover {
+                                background-color: rgb(0, 0, 0);
+                                transition: 0.4s;
+                                transform: translateY(-0.5%);
+                            }
+
+                            a {
+                                color: $text-color;
+                            }
+                        }
+
+                        h3 {
+                            padding-top: 10rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //------------------------------------------------------//
+    //     INDEX TEXT 2 SECTION //
+    //------------------------------------------------------//
+
+    #main-text-2-section {
+        color: $text-color;
+
+        #main-text-2-container {
+            #main-subtitle-2 {
+                @extend %title;
+                line-height: $line-height2-3;
+
+                span {
+                    display: block;
+                }
+            }
+
+            p {
+                margin: $margin1;
+                line-height: $line-height1-7;
+
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .show-rectangle {
+        display: none;
+    }
+
+    //------------------------------------------------------//
+    // INDEX NUESTRO ESTUDIO INTRO MOBILE  //
+    //------------------------------------------------------//
+
+    .horizontal-line-studio {
+        display: none;
+    }
+
+    #recording-studio-section {
+        display: none;
+        padding: 1rem 0;
+
+        #recording-studio-title {
+            @extend %title;
+            padding-bottom: $padding2;
+        }
+
+        #recording-studio {
+            @include flexrow;
+
+            img {
+                padding: $padding;
+                width: 100%;
+                cursor: pointer;
+                
+                transition: 0.2s;
+
+                &:hover {
+                    transform: translateY(-2%);
+                }
+            }
+
+            #grey-square1,
+            #grey-square2,
+            #grey-square3 {
+                border: $border-grey-square;
+
+                img {
+                    margin: 4rem 0;
+                    padding: $padding;
+                    width: 100%;
+                    cursor: pointer;
+                 
+                    transition: 0.2s;
+
+                    &:hover {
+                        transform: translateY(-2%);
+                    }
+                }
+            }
+        }
+    }
+
+    //------------------------------------------------------//
+    // INDEX NUESTRO ESTUDIO INFO MOBILE  //
+    //------------------------------------------------------//
+
+    .grid-estudios {
+        margin: 3rem 3rem 0 3rem;
+        display: grid;
+        grid-template-areas:
+            "image1"
+            "estudio-article1"
+            "image2"
+            "estudio-article2"
+            "image3"
+            "estudio-article3";
+        row-gap: 2rem;
+
+        div {
+            img {
+                display: block;
+                width: 100%;
+            }
+
+            .image-overlay {
+                @include imageOverlay;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                h4 {
+                    font-size: $title-size2;
+                    font-weight: 600;
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    text-align: center;
+                    font-size: $title-size1;
+                    line-height: $line-height1;
+                }
+            }
+        }
+
+        .image1 {
+            grid-area: image1;
+        }
+
+        .image2 {
+            grid-area: image2;
+        }
+
+        .image3 {
+            grid-area: image3;
+        }
+
+        .image1,
+        .image2,
+        .image3 {
+            position: relative;
+            width: 100%;
+            
+
+            img {
+                filter: brightness(80%);
+              
+            }
+        }
+
+        .estudio-article1 {
+            grid-area: estudio-article1;
+        }
+
+        .estudio-article2 {
+            grid-area: estudio-article2;
+        }
+
+        .estudio-article3 {
+            grid-area: estudio-article3;
+        }
+
+        .estudio-article1,
+        .estudio-article2,
+        .estudio-article3 {
+            background-color: $black-article-background;
+
+            .estudio-info {
+                margin: $margin1-5;
+                @include text;
+            }
+        }
+    }
+
+    //------------------------------------------------------//
+    // INDEX SERVICIO DE PRODUCCION MUSICAL INTEGRAL MOBILE //
+    //------------------------------------------------------//
+
+    .grid-produccion-musical {
+        display: grid;
+        grid-template-areas:
+            "produccion-title"
+            "produccion1"
+            "produccion-article1"
+            "produccion2"
+            "produccion-article2"
+            "produccion3"
+            "produccion-article3";
+
+        .produccion-musical-title {
+            grid-area: produccion-title;
+            @extend %title;
+            padding: 0 2rem 2rem 2rem;
+            line-height: $line-height3;
+            text-transform: none;
+
+            h5 {
+                width: 100%;
+                @include produccion-title;
+                line-height: $line-height2-7;
+                text-transform: uppercase;
+            }
+        }
+
+        div {
+            transition: 1s;
+
+            img {
+                @include medidas (75%, 100%);
+                filter: brigthness(70%);
+                transition: 1.3s;
+
+                &:hover {
+                    transform: scale(1.1);
+                    z-index: 2;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .produccion1 {
+            grid-area: produccion1;
+            @include flexrow;
+        }
+
+        .produccion2 {
+            grid-area: produccion2;
+            @include flexrow;
+        }
+
+        .produccion3 {
+            grid-area: produccion3;
+            @include flexrow;
+        }
+
+        .produccion-article1 {
+            grid-area: produccion-article1;
+        }
+
+        .produccion-article2 {
+            grid-area: produccion-article2;
+        }
+
+        .produccion-article3 {
+            grid-area: produccion-article3;
+            margin: 2rem 2rem 0 2rem;
+        }
+
+        .produccion-article1,
+        .produccion-article2,
+        .produccion-article3 {
+            background-color: $black-article-background;
+            margin: $margin2;
+            @include text;
+
+            h5 {
+                margin: $margin1-5;
+                @include produccion-title;
+            }
+
+            p {
+                margin: $margin1;
+
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    //------------------------------------------------------//
+    // INDEX FORMACION MUSICAL MOBILE //
+    //------------------------------------------------------//
+
+    .grid-formacion-musical {
+        display: grid;
+        grid-template-areas:
+            "formacion-title"
+            "formacion1"
+            "formacion-article1"
+            "formacion2"
+            "formacion-article2"
+            "h-line"
+            "formacion3"
+            "formacion-article3"
+            "formacion4"
+            "formacion-article4";
+
+        div {
+            margin: 0 2rem;
+
+            img {
+                width: 100%;
+                filter: grayscale(0);
+
+                &:hover {
+                    cursor: pointer;
+                    filter: grayscale(1);
+                }
+            }
+        }
+
+        .formacion-title {
+            padding-bottom: $padding2;
+            grid-area: formacion-title;
+            @extend %title;
+
+         
+        }
+
+        .formacion1 {
+            grid-area: formacion1;
+        }
+
+        .formacion2 {
+            grid-area: formacion2;
+        }
+
+        .formacion3 {
+            grid-area: formacion3;
+            @include flexrow;
+        }
+
+        .formacion4 {
+            grid-area: formacion4;
+            @include flexrow;
+        }
+
+        .formacion-article1 {
+            grid-area: formacion-article1;
+        }
+
+        .formacion-article2 {
+            grid-area: formacion-article2;
+            margin: 2rem 2rem 0 2rem;
+        }
+
+        .formacion-article3 {
+            grid-area: formacion-article3;
+        }
+
+        .formacion-article4 {
+            grid-area: formacion-article4;
+            margin: 2rem 2rem 0 2rem;
+        }
+
+        .formacion-article1,
+        .formacion-article2,
+        .formacion-article3,
+        .formacion-article4 {
+            margin: $margin2;
+            background-color: $black-article-background;
+            @include text;
+
+            h6 {
+                text-align: center;
+                font-size: $title-size2;
+                margin: $margin1;
+            }
+
+            .formacion-info {
+                margin: 1rem 2rem;
+
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .horizontal-line-formacion {
+        display: none;
+    }
+
+    //------------------------------------------------------//
+    // INDEX DISCOS CAROUSEL MOBILE //
+    //------------------------------------------------------//
+
+    #carousel-show {
+        display: none;
+
+        .carousel-title-index {
+            margin: $margin3;
+            text-align: center;
+
+            h6 {
+                font-size: $title-size3;
+            }
+        }
+
+        #carousel-gallery {
+            div {
+                div {
+                    div {
+                        img {
+                            filter: brightness(75%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .horizontal-line-recording {
+        display: none;
+    }
+
+    .horizontal-line-rectangle {
+        display: none;
+        margin: 1rem 4rem;
+    }
+
+    // SCROLL TO TOP
+
+    .arrow-up-container {
+        position: fixed;
+        bottom: 2rem;
+        right: 2.2rem;
+        text-align: center;
+        width: 4vw;
+        height: 5vh;
+
+        .arrow-up-link {
+            font-weight: bold;
+            font-size: $title-size2;
+            line-height: $line-height2;
+            color: $white;
+        }
+    }
+}

@@ -1,0 +1,79 @@
+// ------------------------------------------------------  //
+// GLOBAL FOOTER //
+// ------------------------------------------------------  //
+
+.footer-container {
+    font-size: 1rem;
+    @include flexcol;
+
+    .footer-content {
+        span {
+            padding: 1rem;
+            display: block;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 1.1rem;
+            width: 100%;
+
+            a {
+                color: $text-color;
+
+                &:hover {
+                    color: #ccc;
+                }
+            }
+        }
+
+        h4 {
+            text-align: center;
+            font-size: 1.1rem;
+
+            a {
+                color: $text-color;
+
+                &:hover {
+                    color: #ccc;
+                }
+            }
+        }
+
+        h6 {
+            text-align: center;
+            font-size: 1.1rem;
+            width: 100%;
+
+            a {
+                color: $text-color;
+
+                &:hover {
+                    color: #ccc;
+                }
+            }
+        }
+    }
+
+    .footer-icons-flex {
+        padding: 1.3rem 0;
+        @include flexrow;
+        font-size: 1.5rem;
+
+        a {
+            color: $text-color;
+
+            #icon-item {
+                font-size: 0.9rem;
+                padding: 0.5rem;
+                border: 2px solid $text-color;
+
+                &:hover {
+                    background-color: $white-hover;
+                    ;
+                    color: $black-background;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

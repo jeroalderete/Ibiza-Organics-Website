@@ -1,0 +1,53 @@
+// HORARIOS MOBILE PAGE //
+
+#header {
+    .navbar-toggler {
+        display: block;
+        margin-top: 5rem;
+    }
+}
+
+.grid-container-horarios {
+    display: grid;
+    grid-template-areas:
+        "main-hero-horarios"
+        "main-section-horarios-flex"
+        "main-title-horarios";
+
+    .main-hero-horarios {
+        grid-area: main-hero-horarios;
+        background-image: linear-gradient(rgba(16, 16, 16, .7), rgba(16, 16, 16, .7)), url(../img/34.jpg);
+        @extend %background-image-hero;
+
+        section {
+            height: 100%;
+
+            .main-section-horarios-flex {
+                padding-top: $padding2;
+                grid-area: main-section-horarios-flex;
+                @include flexcol;
+
+                .main-title-horarios {
+                    grid-area: main-title-horarios;
+                    text-align: center;
+                    color: $white-hover;
+                    font-size: $title-size2;
+                    font-weight: 300;
+                    letter-spacing: $letter-spacing3;
+                    @include flexcol;
+                    margin-bottom: 2rem;
+                }
+            }
+
+            ul {
+                text-align: center;
+                color: $white-hover;
+                list-style-type: none;
+                font-size: $title-size1-5;
+                font-weight: 300;
+                line-height: 4rem;
+                @include medidas (90%, 100%);
+            }
+        }
+    }
+}
